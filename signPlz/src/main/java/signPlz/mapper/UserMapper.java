@@ -1,9 +1,14 @@
 package signPlz.mapper;
 
+import signPlz.model.User.Register;
 import signPlz.model.User.UserLogin;
 
 public interface UserMapper {
 
-	void loginCheck(UserLogin param);
+	String selectPwById(String userId);
+
+	void insertUser(Register register);
+
+
 
 }
