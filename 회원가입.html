@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 가입</title>
+</head>
+<style>
+
+   h2{
+       color: darkviolet;
+   }
+    .button{
+        background-color:darkviolet;
+        border:slateblue;
+         font-style: normal;
+        color: white;
+        width: 70px;
+        height: 35px;
+       
+      
+    }
+    
+
+</style>
+<body>
+        
+    <div class="row mb-3"> 
+        <div class="col-12">
+            <h2 class="border p-3 bg-light">회원가입</h2>
+        </div>
+    </div>
+        
+        
+
+    <div class="row mb-3" id="background"> 
+        <div class="col-12">
+            <form  id ="registForm" method="post" class="border p-3 bg-light " onsubmit="return onSubmitCheck()">
+                  <div class="form-group">
+                     <div class="col-md-10 needs-validation" novalidate>
+                        <label for="inputname" class="form-label">이름</label>
+                        <input type="text" class="form-control" id="inputname" required>  
+                        <div class="invalid-feedback">   sd </div>  
+                     </div>
+
+                    <div class="col-md-10">
+                        <label for="inputPassword" class="form-label">비밀번호</label>
+                        <input type="password" class="form-control" id="inputPassword">
+                            <div id="passwordHelpBlock" class="form-text">
+                                Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces.
+                            </div>
+                </div>
+ 
+                <div class="col-md-10">
+                    <label for="inputEmail" class="form-label">이메일</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
+                  </div>
+   
+                 <div class="col-md-10">
+                     <label for="inputDepartmentId" class="form-label">부서번호</label>
+                     <input type="departmentId" class="form-control" id="inputDepartmentId">
+                </div>
+   
+                 <div class="col-md-10">
+                    <label for="inputPhoneNumber" class="form-label">전화번호</label>
+                    <input type="text" class="form-control" id="inputPhoneNumber">
+                </div></br>
+                 </div>
+                 <div>
+                    <button class="button" type="submit" class="btn btn-primary">join</button>
+                 </div> 
+            </form>
+            
+        </div>
+    </div>
+
+    <script>
+        function onSubmitCheck(){
+            console.log("진입!!");
+            var a = registForm;
+            if(registForm.inputname.value == "") {
+                return false;
+            }else if(registForm.inputPassword.value == ""){
+                alert("test")
+                return false;
+            }
+            return true;
+        }
+
+    </script>      
+</body>
+</html>
